@@ -5,7 +5,6 @@ This repository contains Databricks code for Data Engineering
 ### Requirements
 Build a report that shows total sales by month and year
 ### Technical Requirements
-- Build a report that shows total sales by month and year
 - Use Databricks medallion architecture
 - Use raw transactions data in bronze layer
 - Build data model for customer, product and transactions in silver
