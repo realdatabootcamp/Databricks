@@ -11,7 +11,7 @@ Build a report that shows total sales by month and year
 - Build aggregated data (sales report) in gold layer
 ### Environment Setup
 - Get Databricks Community Edition (Free)
-- [Link](https://github.com/user-attachments/assets/4174ad98-583d-486a-9188-803f2e84ad56) to sign-up for Databricks Community Edition
+- [Link](https://login.databricks.com/?dbx_source=CE&intent=CE_SIGN_UP) to sign-up for Databricks Community Edition
 ### Create a cluster (compute)
 - Choose the latest Databricks runtime version available
 - Rename cluster name by clicking the pencil (optional)
