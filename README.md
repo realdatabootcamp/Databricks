@@ -19,7 +19,7 @@ Build a report that shows total sales by month and year
 ![image](https://github.com/user-attachments/assets/3a15c570-c19c-4c95-acac-c6b4d7688c4c)
 ### Create Notebook
 ![image](https://github.com/user-attachments/assets/584f870d-baba-4d47-a604-a977a0320025)
-- Attach is to the cluster created
+- Attach notebook to the cluster created
 - Rename notebook to align to its purpose
 ![image](https://github.com/user-attachments/assets/86b0faaf-0d51-4003-8483-a843d970fe8f)
 ### Write Code in Notebook
