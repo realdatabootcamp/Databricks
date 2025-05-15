@@ -22,7 +22,7 @@ Build a report that shows total sales by month and year
 - Full code available [here](https://github.com/realdatabootcamp/Databricks/blob/main/04%20Projects/Sales/generate-sales-report.py)
 ![image](https://github.com/user-attachments/assets/0d6cfd51-dfd8-4155-9991-203a08cbc934)
 
-# Key Questions for ETL: First Load vs. Incremental Load  
+# Now that you have built your report, below are some Key Questions for ETL (Extract Transform and Loading data): First Load vs. Incremental Load (Ongoing) 
 
 Understanding **first load vs. incremental load** in ETL processes is crucial for maintaining **data integrity, efficiency, and performance**. Below are essential questions to consider during each phase.
 
