@@ -84,7 +84,86 @@ Understanding **first load vs. incremental load** in ETL processes is crucial fo
 - How do we maintain **audit trails** for historical tracking?  
 
 ---
+# ETL Load Types & Procedure  
 
+ETL (Extract, Transform, Load) processes involve different load types based on **initial data ingestion, updates, and real-time streaming**. The procedure ensures **data integrity, efficiency, and scalability** for analytics and reporting.
+
+---
+
+## 1. Load Types in ETL  
+
+### 🔹 Full Load (Initial Load)  
+- **Definition:** Loads the entire dataset into the target system for the first time.  
+- **Use Case:** Setting up a **new data warehouse or database**.  
+- **Procedure:**  
+  1. **Extract** all available data from the source.  
+  2. **Transform** data by cleaning, standardizing, and structuring it.  
+  3. **Load** the entire dataset into the target storage (e.g., Azure Data Lake, Snowflake).  
+- **Challenges:** Large data volumes require **partitioning and indexing** for optimal performance.  
+
+### 🔹 Incremental Load  
+- **Definition:** Loads only **new or updated** records instead of refreshing the entire dataset.  
+- **Use Case:** Periodic updates for **operational reporting**.  
+- **Procedure:**  
+  1. Identify **new or changed records** using timestamps or Change Data Capture (CDC).  
+  2. Extract only the **modified data**.  
+  3. Merge new records into the target system (**UPSERT method**).  
+- **Methods:** Append-only load, CDC tracking, or Merge (Upsert).  
+
+### 🔹 Batch Load  
+- **Definition:** Loads data in **chunks** on a predefined schedule.  
+- **Use Case:** Periodic ETL jobs in **data lakes and reporting systems**.  
+- **Procedure:**  
+  1. Extract data in **predefined batches** (e.g., hourly, daily).  
+  2. Process data transformations **in stages**.  
+  3. Store processed data in the **structured database**.  
+- **Optimization:** Parallel processing improves batch load efficiency.  
+
+### 🔹 Streaming Load (Real-Time Processing)  
+- **Definition:** Continuously ingests **live data streams** for real-time analytics.  
+- **Use Case:** IoT telemetry, fraud detection, and transactional updates.  
+- **Procedure:**  
+  1. Capture streaming data using **Kafka, Azure Event Hub, or AWS Kinesis**.  
+  2. Apply transformations in **real-time via Spark Streaming**.  
+  3. Load directly into **Delta Lake or real-time databases**.  
+- **Optimization:** Uses event-driven architecture for **low-latency data processing**.  
+
+### 🔹 Delta Load  
+- **Definition:** Loads only the **differences** between source and target datasets.  
+- **Use Case:** Efficient updates for **Delta Lake and slowly changing dimensions (SCD)**.  
+- **Procedure:**  
+  1. Identify **changed records** by comparing timestamps or checksums.  
+  2. Extract only **modified rows**.  
+  3. Merge with existing data in **Delta format**.  
+- **Optimization:** Delta Lake maintains **ACID transactions** for scalable updates.  
+
+### 🔹 Historical Load  
+- **Definition:** Loads archived historical data separately from **current operational datasets**.  
+- **Use Case:** Compliance audits, retrospective analytics, or machine learning training.  
+- **Procedure:**  
+  1. Extract archived data from **backup sources**.  
+  2. Store in a **historical partition or separate table**.  
+  3. Enable **time-travel queries** for analytics.  
+- **Optimization:** Stored separately to prevent interference with **active datasets**.  
+
+---
+
+## 2. General ETL Load Procedure  
+
+Regardless of load type, the **ETL workflow** follows these core steps:
+
+1️⃣ **Extraction** – Retrieve data from **source databases, APIs, files, or streams**.  
+2️⃣ **Transformation** – Apply cleaning, standardization, deduplication, and enrichment.  
+3️⃣ **Loading** – Move processed data into the **target system (SQL warehouse, data lake, or BI platform)**.  
+4️⃣ **Validation & Monitoring** – Ensure data quality using **audit logs, checksums, and alerts**.  
+5️⃣ **Optimization** – Improve query performance via **indexing, partitioning, and caching**.  
+
+---
+
+## 3. Final Considerations  
+
+Different ETL load types ensure **optimized, scalable, and accurate** data processing. 🚀  
+Would you like a **detailed example of Delta Load implementation in Databricks?**  
 ## 3. Final Considerations  
 - Should we implement **Delta Lake for ACID compliance** in data lakes?  
 - How do we ensure **ETL pipelines remain scalable** as data volumes grow?  
