@@ -19,5 +19,5 @@ Build a report that shows total sales by month and year
 - Rename notebook to align to its purpose
 ![image](https://github.com/user-attachments/assets/86b0faaf-0d51-4003-8483-a843d970fe8f)
 ### Write Code in Notebook
-- Full code available [here](https://github.com/realdatabootcamp/Databricks/blob/main/generate-sales-report.py)
+- Full code available [here](https://github.com/realdatabootcamp/Databricks/blob/main/04%20Projects/Sales/generate-sales-report.py)
 ![image](https://github.com/user-attachments/assets/0d6cfd51-dfd8-4155-9991-203a08cbc934)
